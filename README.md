@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Next AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Next AI is a full-stack web application that lets users upload PDF documents, engage in AI-powered chat sessions about their contents via text or voice, and access a history of questions and answers. It employs LangChain for prompt orchestration, retrieval-augmented generation for context retrieval, and speech-to-text and text-to-speech components for an interactive experience.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. PDF upload and vector store retrieval for context-aware AI responses  
+2. AI chat interface built with LangChain and OpenAI GPT  
+3. Speech recognition and synthesis using react-speech-recognition and speak-tts  
+4. Voice-based interaction allowing users to speak questions and listen to answers  
+5. Conversation history organized in a scrollable sidebar  
+6. Responsive design implemented with Ant Design components  
+7. Seamless frontend-backend integration
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**  
+  React.js  
+  Ant Design  
+  react-speech-recognition  
+  speak-tts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Backend**  
+  Node.js  
+  Express.js  
+  LangChain
 
-### `npm test`
+- **AI**  
+  OpenAI GPT model invoked via LangChain chains and prompts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **File handling**  
+  Multer for PDF uploads
 
-### `npm run build`
+- **State management**  
+  React useState and Context API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Key Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```json
+{
+  "name": "nextai",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^5.8.4",
+    "axios": "^1.5.0",
+    "concurrently": "^8.2.1",
+    "langchain": "^0.x.x",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-speech-recognition": "^3.10.0",
+    "speak-tts": "^2.0.8",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm start\" \"npm run server\"",
+    "server": "cd server && npm run start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+}
