@@ -68,14 +68,14 @@ Next AI is a full-stack web application that lets users upload PDF documents, en
 
 Here are some screenshots of the application:
 
-### **PDF Upload Interface**
+### **Chat Interface**
 ![PDF Upload Interface](project_perview/image.png)
 
-### **Chat Interface**
+### **PDF Upload Interface**
 ![Chat Interface](project_perview/image%20copy.png)
 
-### **Conversation History**
+### **Voice Interaction**
 ![Conversation History](project_perview/image%20copy%203.png)
 
-### **Voice Interaction**
+### **Conversation History**
 ![Voice Interaction](project_perview/image%20copy%202.png)
